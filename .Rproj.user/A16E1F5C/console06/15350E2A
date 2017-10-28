@@ -1,0 +1,42 @@
+]0;~/Dropbox/R_projects/r_data_mining[?1034hMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mdeleted:    data/dati_ews_10gen2017_integrata.sas7bdat[m
+	[31mdeleted:    data/dati_ews_10gen2017_integrata.xlsx[m
+	[31mdeleted:    data/p17_campione_sof_mod_final_2.sas7bdat[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.Rhistory[m
+	[31m.Rproj.user/[m
+	[31mr_data_mining.Rproj[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add -A
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add am "added pro[K[K[Krpo[Kroh[Kj and cel[K[Kleand data folder"
+fatal: pathspec 'am' did not match any files
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add am "added rproj and cleand data folder"[C[C[C[C[C[1@a[1P[1@-
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add -am "added rproj and cleand data folder"[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1@v[1@c[1@o[1@m[1@m[1@i[1P[1P[1P[1P[1P[1P[1@c[1@o[1@m[1@m[1@i[1@t

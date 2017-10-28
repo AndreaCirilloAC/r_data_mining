@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1509196723656.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "490F49F6",
+    "lastKnownWriteTime" : 1509172794,
+    "last_content_update" : 1509172794,
+    "path" : "~/Dropbox/R_projects/r_data_mining/chapter_7.R",
+    "project_path" : "chapter_7.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
