@@ -30,9 +30,15 @@ colnames(clean_casted_stored_data_validated_complete) <- c("corporation",
   ncvTest(linear_regression_revenues)
   durbinWatsonTest(linear_regression_revenues)
   
-training_data %>% 
-  mutate(default_numeric = as.numeric(default_numeric))%>% 
-  select(- default_flag, - customer_code)-> training_data 
+  clean_casted_stored_data_validated_complete %>% 
+    dplyr::select(-default_flag) %>% 
+    dplyr::select(-customer_code) %>% 
+    dplyr::select(-c(customer_agreement, subsidiary)) %>% 
+    dplyr::mutate(default_numeric = as.numeric(default_numeric))-> training_data
+  
+#training_data %>% 
+ # mutate(default_numeric = as.numeric(default_numeric))%>% 
+  #select(- default_flag, - customer_code)-> training_data 
 
 mode(linear_regression_revenues)
 str(linear_regression_revenues)

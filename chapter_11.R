@@ -1,6 +1,6 @@
 library(dplyr)
 library(tidyr)
-
+library(caret)
 
 #random forest
 
@@ -14,5 +14,13 @@ random_forest <- randomForest::randomForest(formula = as.factor(default_numeric)
                                             ntree = 400, 
                                             importance = TRUE)
 
+random_forest
+
 plot(random_forest)
+
+random_forest$err.rate %>% tail()
+
 varImpPlot(random_forest)
+
+## ensemble learning and confusion matrix
+
