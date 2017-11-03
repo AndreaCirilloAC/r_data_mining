@@ -7,7 +7,7 @@ library(lmtest)
 clean_casted_stored_data_validated_complete %>% 
   dplyr::select(-default_flag) %>% 
   dplyr::select(-customer_code) %>% 
-  dplyr::select(-c(customer_agreement, subsidiary)) %>% 
+   dplyr::select(-c(customer_agreement, subsidiary)) %>% 
   dplyr::mutate(default_numeric = as.numeric(default_numeric))-> training_data
 
 education <- data.frame(n = c(1,1,2,2,2,1,3),
@@ -33,9 +33,15 @@ dataviz_dataset %>%
 
 # validating assumption related to the linearity of log odds
 
-logistic_quadratic <- glm(as.numeric(default_numeric) ~ . + cost_income^2 + ROE^2 + employees^2 + ROS^2 + company_revenues^2 , data = training_data, family = "binomial")
+logistic_quadratic <- glm(as.numeric(default_numeric) ~ . + 
+                            cost_income^2 + 
+                            ROE^2 + 
+                            employees^2 + 
+                            ROS^2 + 
+                            company_revenues^2 , 
+                          data = training_data, family = "binomial")
 
-anova(logistic,logistic_quadratic , test= 'LRT')
+lrtest(logistic_quadratic ,logistic)
 
 
 
