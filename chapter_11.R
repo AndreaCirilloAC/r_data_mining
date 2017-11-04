@@ -59,9 +59,9 @@ confusionMatrix(as.factor(random_forest$predicted), as.factor(random_forest$y))
 data <- data.frame(model = c("logistic",
                              "support_vector",
                              "random_forest"), 
-                   precision = c(494/(494+2513),
-                                 487/(487+2520),
-                                 1951/(1951+1056)))
+                   precision= c(8352/(164+8352),
+                     8356/(160+8356),
+                     7923/(7923+593)))
                    
 ggplot(data = data, aes(x = model,y = precision, label = round(precision,2)))+
   geom_bar(stat = 'identity')+
@@ -80,4 +80,4 @@ ensemble_dataset %>%
 confusionMatrix(as.factor(ensemble_dataframe$majority), as.factor(ensemble_dataframe$observed))
 
 
-
+# predicting on new data
