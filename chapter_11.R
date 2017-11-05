@@ -87,6 +87,7 @@ confusionMatrix(as.factor(ensemble_dataframe$majority), as.factor(ensemble_dataf
 # predicting on new data
 me_customer_list <- import("middle_east_customer_list.xlsx")
 
+str(me_customer_list)
 me_customer_list %>%
   select(corporation,
          previous_default,
@@ -108,8 +109,9 @@ levels(wrangled_me_customer_list$business_unit) <- levels(training_data_factor$b
 
 me_customer_list$logistic <- predict.glm(logistic,newdata = wrangled_me_customer_list)
 set.seed(11)
-me_customer_list$svm <- predict(support_vector_machine_linear,newdata = random_forest_data)
-me_customer_list$random_forest <-predict(random_forest,newdata = random_forest_data)
+me_customer_list$random_forest <-predict(random_forest,newdata = wrangled_me_customer_list)
+me_customer_list$svm <- predict(support_vector_machine_linear,newdata = wrangled_me_customer_list)
+
 
 me_customer_list %>% 
   mutate(logistic_threshold = case_when(as.numeric(logistic)>0.5 ~ 1,
@@ -119,6 +121,10 @@ me_customer_list %>%
   mutate(ensemble_prediction = case_when(logistic_threshold+svm_threshold+ as.numeric(as.character(random_forest)) >=2 ~ 1,
                                        TRUE ~ 0)) ->  me_customer_list_complete
 
-me_customer_list_complete %>% filter(ensemble_prediction == 1) %>% select(company_name) -> defaulted 
-save(defaulted,file ="../r_datamining/visure/defaults.rdata")
+me_customer_list_complete %>% filter(ensemble_prediction == 1) -> defaulted_companies 
+
+defaulted_companies %>% export("defaulted_companies.xlsx")
+
+# me_customer_list_complete %>% filter(ensemble_prediction == 1) %>% select(company_name) -> defaulted 
+# save(defaulted,file ="../r_datamining/visure/defaults.rdata")
 
