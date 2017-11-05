@@ -1,6 +1,8 @@
 library(dplyr)
 library(tidyr)
 library(caret)
+library(randomForest)
+library(e1071)
 
 #random forest
 
@@ -60,9 +62,9 @@ data <- data.frame(model = c("logistic",
                              "support_vector",
                              "random_forest"), 
                    precision= c(8352/(164+8352),
-                     8356/(160+8356),
-                     7923/(7923+593)))
-                   
+                                8356/(160+8356),
+                                7923/(7923+593)))
+
 ggplot(data = data, aes(x = model,y = precision, label = round(precision,2)))+
   geom_bar(stat = 'identity')+
   geom_text()
@@ -81,3 +83,42 @@ confusionMatrix(as.factor(ensemble_dataframe$majority), as.factor(ensemble_dataf
 
 
 # predicting on new data
+
+# predicting on new data
+me_customer_list <- import("middle_east_customer_list.xlsx")
+
+me_customer_list %>%
+  select(corporation,
+         previous_default,
+         multiple_country,
+         cost_income,
+         ROE,
+         employees,
+         economic_sector,
+         ROS,
+         company_revenues,
+         commercial_portfolio,
+         business_unit) %>% 
+  mutate(commercial_portfolio = as.factor(commercial_portfolio),
+         business_unit = as.factor(business_unit))->wrangled_me_customer_list
+
+
+levels(wrangled_me_customer_list$commercial_portfolio) <- levels(training_data_factor$commercial_portfolio) 
+levels(wrangled_me_customer_list$business_unit) <- levels(training_data_factor$business_unit) 
+
+me_customer_list$logistic <- predict.glm(logistic,newdata = wrangled_me_customer_list)
+set.seed(11)
+me_customer_list$svm <- predict(support_vector_machine_linear,newdata = random_forest_data)
+me_customer_list$random_forest <-predict(random_forest,newdata = random_forest_data)
+
+me_customer_list %>% 
+  mutate(logistic_threshold = case_when(as.numeric(logistic)>0.5 ~ 1,
+                                        TRUE ~ 0),
+         svm_threshold = case_when(as.numeric(svm)>0.5 ~ 1,
+                                   TRUE ~ 0)) %>% 
+  mutate(ensemble_prediction = case_when(logistic_threshold+svm_threshold+ as.numeric(as.character(random_forest)) >=2 ~ 1,
+                                       TRUE ~ 0)) ->  me_customer_list_complete
+
+me_customer_list_complete %>% filter(ensemble_prediction == 1) %>% select(company_name) -> defaulted 
+save(defaulted,file ="../r_datamining/visure/defaults.rdata")
+
