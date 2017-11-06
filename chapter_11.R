@@ -125,6 +125,6 @@ me_customer_list_complete %>% filter(ensemble_prediction == 1) -> defaulted_comp
 
 defaulted_companies %>% export("defaulted_companies.xlsx")
 
-# me_customer_list_complete %>% filter(ensemble_prediction == 1) %>% select(company_name) -> defaulted 
+ 
 # save(defaulted,file ="../r_datamining/visure/defaults.rdata")
 
