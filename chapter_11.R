@@ -107,13 +107,13 @@ me_customer_list %>%
 levels(wrangled_me_customer_list$commercial_portfolio) <- levels(training_data_factor$commercial_portfolio) 
 levels(wrangled_me_customer_list$business_unit) <- levels(training_data_factor$business_unit) 
 
-me_customer_list$logistic <- predict.glm(logistic,newdata = wrangled_me_customer_list)
+wrangled_me_customer_list$logistic <- predict.glm(logistic,newdata = wrangled_me_customer_list)
 set.seed(11)
-me_customer_list$random_forest <-predict(random_forest,newdata = wrangled_me_customer_list)
-me_customer_list$svm <- predict(support_vector_machine_linear,newdata = wrangled_me_customer_list)
+wrangled_me_customer_list$random_forest <-predict(random_forest,newdata = wrangled_me_customer_list)
+wrangled_me_customer_list$svm <- predict(support_vector_machine_linear,newdata = wrangled_me_customer_list)
 
 
-me_customer_list %>% 
+wrangled_me_customer_list %>% 
   mutate(logistic_threshold = case_when(as.numeric(logistic)>0.5 ~ 1,
                                         TRUE ~ 0),
          svm_threshold = case_when(as.numeric(svm)>0.5 ~ 1,
