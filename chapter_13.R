@@ -10,26 +10,42 @@ library(ggplot2)
 library(wordcloud)
 library(igraph)
 library(ggraph)
+library(tidygraph)
 # import companies credit bureau information, stored in PDF format
 file_list <- list.files("data")
 pdf_list <- file_list[grepl(".pdf",file_list)]
 
-pdf_text(paste("data/", pdf_list[1],sep = "")) %>% 
-  strsplit("\n")-> document_text
+
+
+corpus_raw <- data.frame("company" = c(),"text" = c())
 
 # dataframe from PDF
 
-
-data.frame(gsub(x =pdf_list[1],pattern = ".pdf", replacement = ""), document_text, stringsAsFactors = FALSE) -> document
-
-document <- as_tibble(document)
+for (i in 1:length(pdf_list)){
+print(i)
+  pdf_text(paste("data/", pdf_list[i],sep = "")) %>% 
+    strsplit("\n")-> document_text
+data.frame("company" = gsub(x =pdf_list[i],pattern = ".pdf", replacement = ""), 
+           "text" = document_text, stringsAsFactors = FALSE) -> document
+print(colnames(document))
 colnames(document) <- c("company", "text")
-document %>% 
+corpus <- rbind(corpus,document)  
+}
+
+corpus %>% 
+  filter(!grepl("12.05.2017",text)) %>% 
+  filter(!grepl("profile", text)) %>% 
+  filter(!grepl("business profile",text)) %>% 
+  filter(!grepl("enquery",text)) %>% 
+  filter(!grepl("comments",text)) %>%
+  filter(!grepl("1",text)) -> corpus
+
+corpus %>% 
   filter(!grepl(c("date of foundation"),text)) %>% 
   filter(!grepl(c( "industry"),text)) %>% 
-  filter(!grepl(c( "share holders"),text))-> comments
+  filter(!grepl(c( "share holders"),text)) -> comments
 
-information <- document %>% 
+information <- corpus %>% 
   filter(grepl(("date of foundation+"),text)|grepl(( "industry+"),text)|grepl(( "share holders+"),text)) 
 
 
@@ -56,7 +72,7 @@ comments_tidy %>%
   inner_join(lexicon) %>% 
   count(company, index = line_number %/% 80, sentiment) %>%
   spread(sentiment, n, fill = 0) %>%
-  mutate(sentiment = -negative)-> comments_sentiment
+  mutate(sentiment = positive -negative)-> comments_sentiment
 
 ggplot(comments_sentiment, aes(index, sentiment, fill = company)) +
   geom_col(show.legend = FALSE) +
@@ -81,16 +97,88 @@ bigram_comments %>%
   separate(bigram, c("word1", "word2"), sep = " ") %>% 
   filter(!word1 %in% stop_words$word) %>%
   filter(!word2 %in% stop_words$word) %>% 
+  count(word1, word2, sort = TRUE) 
+
+bigram_comments %>%
+  separate(bigram, c("word1", "word2"), sep = " ") %>% 
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) %>% 
+  count(word1, word2, sort = TRUE) 
+
+bigram_comments %>%
+  separate(bigram, c("word1", "word2"), sep = " ") %>% 
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word1 %in% c("enquery","12.05.2017","business","profile")) %>% 
+  filter(!word2 %in% c("enquery","12.05.2017","business","profile")) %>% 
+  filter(!word2 %in% stop_words$word) %>% 
   count(word1, word2, sort = TRUE) %>% 
-  graph_from_data_frame() %>% 
-  ggraph(layout = "fr") +
+graph_from_data_frame() %>% 
+  ggraph() +
   geom_edge_link() +
   geom_node_point() +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1)
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)+
+  theme_graph()
+
 
 
 ## ON INFORMATION
 
 # descriptive: most common industries
 
+information %>% 
+  filter(grepl("industry", text)) %>% 
+  mutate(industry = gsub("industry: ","",text))-> industries
+
+ggplot(industries, aes(x = industry))+
+  geom_histogram(stat = "count")
+
+industries %>% 
+  group_by(industry) %>% 
+  summarise(n = n()) %>% 
+  filter(n >1) %>% 
+  ggplot(aes(x = industry, y = n)) +
+  geom_bar(stat = 'identity')+
+  coord_flip()
+
 # network analysis on  shareholders
+
+information %>% 
+  filter(grepl("share holders", text)) %>% 
+  mutate(shareholders = gsub("share holders: ","",text)) %>% 
+  separate(col = shareholders, into = c("first","second","third"),sep = ";") %>% 
+  gather(key = "number",value ="shareholder",-company,-text) %>% 
+  filter(!is.na(shareholder)) %>% 
+  select(company,shareholder)-> shareholders
+
+set.seed(21)
+
+graph_from_data_frame(shareholders) %>% 
+  ggraph() +
+  geom_edge_link(alpha = .2) +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
+  theme_graph()
+
+#let's try to figure out extisting communities
+ 
+graph_from_data_frame(shareholders)  -> graph_object
+communities <- cluster_label_prop(graph_object)
+V(graph_object)$community <-  communities$membership
+
+ graph_object %>% 
+  ggraph() +
+  geom_edge_link(alpha = .2) +
+  geom_node_point(aes(colour = community)) +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
+  theme_graph()
+ 
+ deg <- degree(graph_object, mode="all")
+ V(graph_object)$size <- deg*3
+
+ graph_object %>% 
+   ggraph() +
+   geom_edge_link(alpha = .2) +
+   geom_node_point(aes(group= community,colour = community,size = size)) +
+   geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
+   theme_graph()
+ 
