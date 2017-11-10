@@ -51,10 +51,7 @@ summary(linear_glm)
 linear_glm$coefficients
 multiple_regression_new$coefficients
 
-boxTidwell(as.numeric(default_numeric)~ . ,data = training_data)
-
 predict(lm_model,newdata = data.frame(family_income = 140000, parents_highest_degree = "university"))
-
 
 support_vector_machine_linear <- svm(default_numeric ~ ., data = training_data, kernel = "linear")
 weights <- t(support_vector_machine_linear$coefs) %*% support_vector_machine_linear$SV

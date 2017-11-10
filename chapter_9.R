@@ -47,7 +47,7 @@ confusion_matrix %>%
 
 confusion_matrix %>% 
   mutate(label = c("true_negative","false_negative","false_positive","true_positive")) %>% 
-  select(label,Freq) %>% 
+  dplyr::select(label,Freq) %>% 
   spread(key = label, value = Freq) -> casted_confusion_matrix
 
 
