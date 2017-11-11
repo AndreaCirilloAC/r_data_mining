@@ -13,9 +13,9 @@ library(ggraph)
 library(tidygraph)
 # import companies credit bureau information, stored in PDF format
 file_list <- list.files("data")
+grepl(".pdf",file_list)
+
 pdf_list <- file_list[grepl(".pdf",file_list)]
-
-
 
 corpus_raw <- data.frame("company" = c(),"text" = c())
 
