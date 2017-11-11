@@ -112,20 +112,6 @@ bigram_comments %>%
   count(word1, word2, sort = TRUE) 
 
 
-bigram_comments %>%
-  separate(bigram, c("word1", "word2"), sep = " ") %>% 
-  filter(!word1 %in% stop_words$word) %>%
-  filter(!word1 %in% c("enquery","12.05.2017","business","profile")) %>% 
-  filter(!word2 %in% c("enquery","12.05.2017","business","profile")) %>% 
-  filter(!word2 %in% stop_words$word) %>% 
-  count(word1, word2, sort = TRUE) %>% 
-graph_from_data_frame() %>% 
-  ggraph() +
-  geom_edge_link() +
-  geom_node_point() +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1)+
-  theme_graph()
-
 ### trigrams
 
 comments %>% 
@@ -139,21 +125,6 @@ trigram_comments %>%
   count(word1, word2, word3, sort = TRUE) 
 
 
-trigram_comments %>%
-  separate(trigram, c("word1", "word2","word3"), sep = " ") %>% 
-  filter(!word1 %in% stop_words$word) %>%
-  filter(!word1 %in% c("enquery","12.05.2017","business","profile")) %>% 
-  filter(!word2 %in% c("enquery","12.05.2017","business","profile")) %>% 
-  filter(!word2 %in% stop_words$word) %>% 
-  filter(!word3 %in% c("enquery","12.05.2017","business","profile")) %>% 
-  filter(!word3 %in% stop_words$word) %>% 
-  count(word1, word2, sort = TRUE) %>% 
-  graph_from_data_frame() %>% 
-  ggraph() +
-  geom_edge_link() +
-  geom_node_point() +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1)+
-  theme_graph()
 
 
 ## ON INFORMATION
@@ -164,12 +135,8 @@ information %>%
   filter(grepl("industry", text)) %>% 
   mutate(industry = gsub("industry: ","",text))-> industries
 
-ggplot(industries, aes(x = industry))+
-  geom_histogram(stat = "count")
-
 industries %>% 
-  group_by(industry) %>% 
-  summarise(n = n()) %>% 
+  count(industry)  %>% 
   filter(n >1) %>% 
   ggplot(aes(x = industry, y = n)) +
   geom_bar(stat = 'identity')+
@@ -185,35 +152,33 @@ information %>%
   filter(!is.na(shareholder)) %>% 
   select(company,shareholder)-> shareholders
 
-set.seed(21)
+
 
 graph_from_data_frame(shareholders) %>% 
   ggraph() +
-  geom_edge_link(alpha = .2) +
+  geom_edge_link() +
   geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
+  theme_graph()
+
+graph_object %>% 
+  ggraph() +
+  geom_edge_link(alpha = .2) +
+  geom_node_point(alpha =.3) +
   geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
   theme_graph()
 
 #let's try to figure out extisting communities
  
-graph_from_data_frame(shareholders)  -> graph_object
-communities <- cluster_label_prop(graph_object)
-V(graph_object)$community <-  communities$membership
 
- graph_object %>% 
-  ggraph() +
-  geom_edge_link(alpha = .2) +
-  geom_node_point(aes(colour = community)) +
-  geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
-  theme_graph()
- 
  deg <- degree(graph_object, mode="all")
  V(graph_object)$size <- deg*3
-
+ 
+ set.seed(30)
  graph_object %>% 
    ggraph() +
    geom_edge_link(alpha = .2) +
-   geom_node_point(aes(group= community,colour = community,size = size)) +
-   geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
+   geom_node_point(aes(size = size),alpha = .3) +
+   geom_node_text(aes(label = name,size = size), vjust = 1, hjust = 1, check_overlap = FALSE)+
    theme_graph()
  
