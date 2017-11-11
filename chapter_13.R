@@ -47,9 +47,7 @@ corpus_raw <- rbind(corpus_raw,document)
 
 corpus_raw %>% 
   filter(!grepl("12.05.2017",text)) %>% 
-  filter(!grepl("profile", text)) %>% 
   filter(!grepl("business profile",text)) %>% 
-  filter(!grepl("enquery",text)) %>% 
   filter(!grepl("comments",text)) %>%
   filter(!grepl("1",text)) -> corpus
 
@@ -58,12 +56,16 @@ corpus %>%
   filter(!grepl(c( "industry"),text)) %>% 
   filter(!grepl(c( "share holders"),text)) -> comments
 
-information <- corpus %>% 
-  filter(grepl(("date of foundation+"),text)|grepl(( "industry+"),text)|grepl(( "share holders+"),text)) 
+corpus %>% 
+  filter(grepl(("date of foundation+"),
+               text)|grepl(( "industry+"),
+                           text)|grepl(( "share holders+"),
+                                       text)) -> information
+information %>% head()
 
+comments %>% head()
 
 # ON COMMENTS  
-
 comments %>% 
   unnest_tokens(word,text)-> comments_tidy
 
@@ -84,23 +86,23 @@ comments_tidy %>%
   spread(sentiment, n, fill = 0) %>%
   mutate(sentiment = positive -negative)-> comments_sentiment
 
-ggplot(comments_sentiment, aes(index, sentiment, fill = company)) +
-  geom_col(show.legend = FALSE) +
-  facet_wrap(~company, ncol = 2, scales = "free_x")
+ggplot(comments_sentiment, aes(x = sentiment)) +
+  geom_histogram()
+
 
 # word clouds
 
+comments_tidy %>%
+  count(word) %>%
+  with(wordcloud(word, n))
 
 comments_tidy %>%
-  anti_join(stop_words) %>%
+  filter(!word %in% stop_words$word) %>%
   count(word) %>%
-  with(wordcloud(word, n, max.words = 100))
+  with(wordcloud(word, n))
 
 # ngram analysis 
 comments %>% 
-  group_by(company) %>%
-  mutate(line_number = row_number()) %>% 
-  ungroup() %>% 
 unnest_tokens(bigram, text, token = "ngrams", n = 2) -> bigram_comments
 
 bigram_comments %>%
@@ -109,11 +111,6 @@ bigram_comments %>%
   filter(!word2 %in% stop_words$word) %>% 
   count(word1, word2, sort = TRUE) 
 
-bigram_comments %>%
-  separate(bigram, c("word1", "word2"), sep = " ") %>% 
-  filter(!word1 %in% stop_words$word) %>%
-  filter(!word2 %in% stop_words$word) %>% 
-  count(word1, word2, sort = TRUE) 
 
 bigram_comments %>%
   separate(bigram, c("word1", "word2"), sep = " ") %>% 
@@ -129,6 +126,34 @@ graph_from_data_frame() %>%
   geom_node_text(aes(label = name), vjust = 1, hjust = 1)+
   theme_graph()
 
+### trigrams
+
+comments %>% 
+  unnest_tokens(trigram, text, token = "ngrams", n = 3) -> trigram_comments
+
+trigram_comments %>%
+  separate(trigram, c("word1", "word2","word3"), sep = " ") %>% 
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) %>% 
+  filter(!word3 %in% stop_words$word) %>% 
+  count(word1, word2, word3, sort = TRUE) 
+
+
+trigram_comments %>%
+  separate(trigram, c("word1", "word2","word3"), sep = " ") %>% 
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word1 %in% c("enquery","12.05.2017","business","profile")) %>% 
+  filter(!word2 %in% c("enquery","12.05.2017","business","profile")) %>% 
+  filter(!word2 %in% stop_words$word) %>% 
+  filter(!word3 %in% c("enquery","12.05.2017","business","profile")) %>% 
+  filter(!word3 %in% stop_words$word) %>% 
+  count(word1, word2, sort = TRUE) %>% 
+  graph_from_data_frame() %>% 
+  ggraph() +
+  geom_edge_link() +
+  geom_node_point() +
+  geom_node_text(aes(label = name), vjust = 1, hjust = 1)+
+  theme_graph()
 
 
 ## ON INFORMATION
