@@ -17,9 +17,22 @@ grepl(".pdf",file_list)
 
 pdf_list <- file_list[grepl(".pdf",file_list)]
 
-corpus_raw <- data.frame("company" = c(),"text" = c())
+# for loop example
 
+for (i in 1:3){
+  print(i)
+}
+
+vector <- c(1,2,3)
+
+for (i in 1:3){
+  vector[i] <- vector[i]+1
+}
+
+vector+1
 # dataframe from PDF
+
+corpus_raw <- data.frame("company" = c(),"text" = c())
 
 for (i in 1:length(pdf_list)){
 print(i)
@@ -29,10 +42,10 @@ data.frame("company" = gsub(x =pdf_list[i],pattern = ".pdf", replacement = ""),
            "text" = document_text, stringsAsFactors = FALSE) -> document
 print(colnames(document))
 colnames(document) <- c("company", "text")
-corpus <- rbind(corpus,document)  
+corpus_raw <- rbind(corpus_raw,document)  
 }
 
-corpus %>% 
+corpus_raw %>% 
   filter(!grepl("12.05.2017",text)) %>% 
   filter(!grepl("profile", text)) %>% 
   filter(!grepl("business profile",text)) %>% 
@@ -52,9 +65,6 @@ information <- corpus %>%
 # ON COMMENTS  
 
 comments %>% 
-  group_by(company) %>%
-  mutate(line_number = row_number()) %>% 
-  ungroup() %>% 
   unnest_tokens(word,text)-> comments_tidy
 
   
@@ -64,13 +74,13 @@ lexicon <- get_sentiments("bing")
 
 comments_tidy %>% 
   inner_join(lexicon) %>% 
-  count(company, index = line_number %/% 80, sentiment) %>%
+  count(company,sentiment) %>%
   spread(sentiment, n, fill = 0) %>%
   mutate(sentiment = positive - negative)
 
 comments_tidy %>% 
   inner_join(lexicon) %>% 
-  count(company, index = line_number %/% 80, sentiment) %>%
+  count(company,  sentiment) %>%
   spread(sentiment, n, fill = 0) %>%
   mutate(sentiment = positive -negative)-> comments_sentiment
 
