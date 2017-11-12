@@ -168,7 +168,7 @@ graph_object %>%
   geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
   theme_graph()
 
-#let's try to figure out extisting communities
+#linking the size of a node to its degree
  
 
  deg <- degree(graph_object, mode="all")
