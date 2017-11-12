@@ -102,27 +102,27 @@ comments_tidy %>%
   with(wordcloud(word, n))
 
 # ngram analysis 
-comments %>% 
-unnest_tokens(bigram, text, token = "ngrams", n = 2) -> bigram_comments
-
-bigram_comments %>%
-  separate(bigram, c("word1", "word2"), sep = " ") %>% 
-  filter(!word1 %in% stop_words$word) %>%
-  filter(!word2 %in% stop_words$word) %>% 
-  count(word1, word2, sort = TRUE) 
-
-
-### trigrams
-
-comments %>% 
-  unnest_tokens(trigram, text, token = "ngrams", n = 3) -> trigram_comments
-
-trigram_comments %>%
-  separate(trigram, c("word1", "word2","word3"), sep = " ") %>% 
-  filter(!word1 %in% stop_words$word) %>%
-  filter(!word2 %in% stop_words$word) %>% 
-  filter(!word3 %in% stop_words$word) %>% 
-  count(word1, word2, word3, sort = TRUE) 
+  comments %>% 
+  unnest_tokens(bigram, text, token = "ngrams", n = 2) -> bigram_comments
+  
+  bigram_comments %>%
+    separate(bigram, c("word1", "word2"), sep = " ") %>% 
+    filter(!word1 %in% stop_words$word) %>%
+    filter(!word2 %in% stop_words$word) %>% 
+    count(word1, word2, sort = TRUE) 
+  
+  
+  ### trigrams
+  
+  comments %>% 
+    unnest_tokens(trigram, text, token = "ngrams", n = 3) -> trigram_comments
+  
+  trigram_comments %>%
+    separate(trigram, c("word1", "word2","word3"), sep = " ") %>% 
+    filter(!word1 %in% stop_words$word) %>%
+    filter(!word2 %in% stop_words$word) %>% 
+    filter(!word3 %in% stop_words$word) %>% 
+    count(word1, word2, word3, sort = TRUE) 
 
 
 
@@ -161,6 +161,8 @@ graph_from_data_frame(shareholders) %>%
   geom_node_text(aes(label = name), vjust = 1, hjust = 1, check_overlap = TRUE)+
   theme_graph()
 
+graph_from_data_frame(shareholders)-> graph_object
+
 graph_object %>% 
   ggraph() +
   geom_edge_link(alpha = .2) +
@@ -177,8 +179,9 @@ graph_object %>%
  set.seed(30)
  graph_object %>% 
    ggraph() +
-   geom_edge_link(alpha = .2) +
+   geom_edge_link() +
    geom_node_point(aes(size = size),alpha = .3) +
    geom_node_text(aes(label = name,size = size), vjust = 1, hjust = 1, check_overlap = FALSE)+
    theme_graph()
+ 
  
