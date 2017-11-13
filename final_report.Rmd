@@ -136,57 +136,34 @@ graph_from_data_frame(shareholders)-> graph_object
 ```
 
 
-# qui con filtro cambiamo parametro usato per size dei nodi:
-  degree
-  accessibility
-  betweenness
 
 ### data lineage
 
-This R Markdown document is made interactive using Shiny. Unlike the more traditional workflow of creating static reports, you can now create documents that allow your readers to change the assumptions underlying your analysis and see the results immediately. 
+```{r}
 
-To learn more, see [Interactive Documents](http://rmarkdown.rstudio.com/authoring_shiny.html).
+information %>% 
+  filter(grepl("industry", text)) %>% 
+  mutate(industry = gsub("industry: ","",text))-> industries
 
-## Inputs and Outputs
 
-You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change.  This demonstrates how a standard R plot can be made interactive by wrapping it in the Shiny `renderPlot` function. The `selectInput` and `sliderInput` functions create the input widgets used to drive the plot.
+industries %>% 
+  inner_join(shareholders) %>% 
+  select(-text)->data_lineage_data
 
-```{r eruptions, echo=FALSE}
 inputPanel(
-  selectInput("n_breaks", label = "Number of bins:",
-              choices = c(10, 20, 35, 50), selected = 20),
+  selectInput("selected_industry", label = "select the industry you want to focus on", selected = "",
+              choices = unique(data_lineage_data$industry)),
   
-  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
-              min = 0.2, max = 2, value = 1, step = 0.2)
+  textInput("name_string", label = "write the name of the shareholder",
+              value = "")
 )
-
-renderPlot({
-  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
-       xlab = "Duration (minutes)", main = "Geyser eruption duration")
-  
-  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
-  lines(dens, col = "blue")
-})
-```
-
-## Embedded Application
-
-It's also possible to embed an entire Shiny application within an R Markdown document using the `shinyAppDir` function. This example embeds a Shiny application located in another directory:
-
-```{r tabsets, echo=FALSE}
-shinyAppDir(
-  system.file("examples/06_tabsets", package = "shiny"),
-  options = list(
-    width = "100%", height = 550
-  )
+renderDataTable(
+ if (input$selected_industry != "" | input$name_string != ""){
+ data_lineage_data %>% 
+ filter(industry == input$selected_industry, grepl(input$name_string,shareholders))}else{(data_lineage_data)}
 )
 ```
 
-Note the use of the `height` parameter to determine how much vertical space the embedded application should occupy.
-
-You can also use the `shinyApp` function to define an application inline rather then in an external directory.
-
-In all of R code chunks above the `echo = FALSE` attribute is used. This is to prevent the R code within the chunk from rendering in the document alongside the Shiny components.
 
 
 
