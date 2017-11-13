@@ -7,7 +7,7 @@ runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
-
+options(scipen = 999)
 library(dplyr)
 library(ggplot2)
 library(tidytext)
@@ -15,6 +15,7 @@ library(tidyr)
 library(igraph)
 library(ggraph)
 library(wordcloud)
+library(knitr)
 
 knitr::opts_chunk$set(echo = FALSE)
 load("data/corpus.rdata")
@@ -34,17 +35,27 @@ corpus %>%
 
 ## activity objectives
 
+the report hereinafter shows result from the analyses performed with the aim of further investigage the drop in revenues during the first quarter of 2017
 
 ## analysed data
 
-`r corpus$company %>% unique() %>% length()`
 
-`r corpus %>% unnest_tokens(word, text, token = "words") %>% select(word) %>% nchar() %>% as.numeric()`
+a sample of `r corpus$company %>% unique() %>% length()` companies was analysed, resorting to the customer cards produced from commercial department. In order to apply relevant text mining techniques described below a corpus of words was derived from those customer cards.
+
+the corpus was composed of `r corpus %>% unnest_tokens(word, text, token = "words") %>% select(word) %>% nchar() %>% as.numeric() %>% round(2)` words.
 
 ## performed analyses
 
+Starting from described dataset the following techniques was applied:
+
+  - sentiment analysis, to discover the mood around the companies
+  - wordcloud to understand how this mood was determined
+  - ngram analysis needed to add context to most relevant words
+  - network analyses on shareholders to observe structures within the relationship among companies and relevant shareholders
+
 ## results
 
+reproduced below are results from mentioned analyses.
 
 ### sentiment analysis
 
@@ -80,6 +91,9 @@ comments_tidy %>%
 ```
 
 ### ngram analysis
+
+#### bigrams
+
 ```{r}
 comments %>% 
 unnest_tokens(bigram, text, token = "ngrams", n = 2) -> bigram_comments
@@ -88,10 +102,14 @@ bigram_comments %>%
   separate(bigram, c("word1", "word2"), sep = " ") %>% 
   filter(!word1 %in% stop_words$word) %>%
   filter(!word2 %in% stop_words$word) %>% 
-  count(word1, word2, sort = TRUE) 
+  count(word1, word2, sort = TRUE) %>% 
+  head() %>% 
+  kable()
+```
 
+#### trigrams
 
-### trigrams
+```{r}
 
 comments %>% 
   unnest_tokens(trigram, text, token = "ngrams", n = 3) -> trigram_comments
@@ -101,7 +119,8 @@ trigram_comments %>%
   filter(!word1 %in% stop_words$word) %>%
   filter(!word2 %in% stop_words$word) %>% 
   filter(!word3 %in% stop_words$word) %>% 
-  count(word1, word2, word3, sort = TRUE) 
+  count(word1, word2, word3, sort = TRUE) %>% 
+  kable()
 ```
 
 ### network analysis
