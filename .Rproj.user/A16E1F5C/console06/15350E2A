@@ -614,4 +614,486 @@ To https://github.com/AndreaCirilloAC/r_data_mining.git
 git [K[K[K[Krm .pdf
 rm: .pdf: No such file or directory
 ]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ rm .pdf*.pdf
-]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ 
+git add -[Kchatper_13[1Pper_13[Cter_13[C[C[Cer_13[1Per_13[1Per_13[1Pr_13[1Per_13[Cter_13[C[C[C[C[C.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit - m[K[Km "added sentit[Kment and [K[K[K[K[K wordcloud and ngram"
+[master 7738fd9] added sentiment wordcloud and ngram
+ 1 file changed, 76 insertions(+), 11 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 1.24 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   2e73d23..7738fd9  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+	[31mmodified:   chapter_13.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_q[K13.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "completed text mining code"
+[master b8f4161] completed text mining code
+ 1 file changed, 100 insertions(+), 12 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 1.82 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   7738fd9..b8f4161  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add -chapte[K[K[K[K[K[K[Kchapter_13.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "e[Kfor loop eample[K[K[K[K[Kxample"
+[master de74c74] for loop example
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git co[K[Kpush
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 328 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   b8f4161..de74c74  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_3[K13.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m" [K[K "re[K[Kremoved inde[K[K[K[Klien num[K[K[K[K[K[Kne number computation in comments tidy"
+[master f010b5a] removed line number computation in comments tidy
+ 1 file changed, 18 insertions(+), 8 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 485 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   de74c74..f010b5a  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ b[KMac-di-Andrea:r_data_mining andrea_cirillo$ b[Kgit c[Kadd chapter_13.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git co[K[Kcommit -m "final version before remogin[K[K[Kving plot on ngrams "
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+
+Untracked files:
+	[31m13_first_word_cloud.png[m
+	[31m13_second_word_cloud.png[m
+	[31m13_sentiment_distr.png[m
+
+no changes added to commit
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "final version before removing plot on ngrams""[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+
+Untracked files:
+	[31m13_first_word_cloud.png[m
+	[31m13_second_word_cloud.png[m
+	[31m13_sentiment_distr.png[m
+
+no changes added to commit
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "final version before removing plot on ngram" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs""[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd chapter_13.R [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_13.R commit -m "final version before removing plot on ngram" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K"
+[master 837ae9d] final version before removing plot on ngram
+ 1 file changed, 43 insertions(+), 18 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 638 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   f010b5a..837ae9d  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_13.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "[K[K[K[K[K[K[K[K[K[K[Kdiff
+[?1h=[1mdiff --git a/.Rproj.user/A16E1F5C/console06/15350E2A b/.Rproj.user/A16E1F5C/console06/15350E2A[m
+[1mindex 987d8d3..1374cb8 100644[m
+[1m--- a/.Rproj.user/A16E1F5C/console06/15350E2A[m
+[1m+++ b/.Rproj.user/A16E1F5C/console06/15350E2A[m
+[36m@@ -614,4 +614,111 @@[m [mTo https://github.com/AndreaCirilloAC/r_data_mining.git[m
+ git[[[[Krm .pdf[m
+ rm: .pdf: No such file or directory[m
+ ]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ rm *[m
+[31m-]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ [m
+\ No newline at end of file[m
+[32m+[m[32mgit add [Kcha[1P[Ct[C[C[[1[1P[[1P[t[C[C[C[C[C.R[m[41m [m
+[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit - [[Km "added senti[Kment and[[[[[K wordcloud and ngram"[m[41m[m
+[32m+[m[32m[master 7738fd9] added sentiment wordcloud and ngram[m[41m[m
+:[K[K+[K:[K[K[32m+[m[32m 1 file changed, 76 insertions(+), 11 deletions(-)[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push[m[41m[m
+:[K[K[32m+[m[32mCounting objects: 3, done.[m[41m[m
+:[K[K[32m+[m[32mDelta compression using up to 4 threads.[m[41m[m
+:[K[K[32m+[m[32mCompressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.[m[41m[m
+:[K[K[32m+[m[32mWriting objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 1.24 KiB | 0 bytes/s, done.[m[41m[m
+:[K[K[32m+[m[32mTotal 3 (delta 1), reused 0 (delta 0)[m[41m[m
+:[K[K[32m+[m[32mremote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K[m[41m[m
+:[K[K[32m+[m[32mTo https://github.com/AndreaCirilloAC/r_data_mining.git[m[41m[m
+:[K[K[32m+[m[32m   2e73d23..7738fd9  master -> master[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git status[m[41m[m
+:[K[K[32m+[m[32mOn branch master[m[41m[m
+:[K[K[32m+[m[32mYour branch is up-to-date with 'origin/master'.[m[41m[m
+:[K[K[32m+[m[32mChanges not staged for commit:[m[41m[m
+:[K[K[32m+[m[32m  (use "git add <file>..." to update what will be committed)[m[41m[m
+:[K[K[32m+[m[32m  (use "git checkout -- <file>..." to discard changes in working directory)[m[41m[m
+:[K[K[32m+[m[41m[m
+:[K[K[32m+[m [32m[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m[m[41m[m
+:[K[K[32m+[m [32m[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m[m[41m[m
+:[K[K[32m+[m [32m[31mmodified:   chapter_13.R[m[m[41m[m
+:[K[K[32m+[m[41m[m
+:[K[K[32m+[m[32mno changes added to commit (use "git add" and/or "git commit -a")[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_[K13.R[m[41m [m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "completed text mining code"[m[41m[m
+:[K[K[32m+[m[32m[master b8f4161] completed text mining code[m[41m[m
+:[K[K[32m+[m[32m 1 file changed, 100 insertions(+), 12 deletions(-)[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push[m[41m[m
+:[K[K[32m+[m[32mCounting objects: 3, done.[m[41m[m
+:[K[K[32m+[m[32mDelta compression using up to 4 threads.[m[41m[m
+:[K[K[32m+[m[32mCompressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.[m[41m[m
+:[K[K[32m+[m[32mWriting objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 1.82 KiB | 0 bytes/s, done.[m[41m[m
+:[K[K[32m+[m[32mTotal 3 (delta 1), reused 0 (delta 0)[m[41m[m
+:[K[K[32m+[m[32mremote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K[m[41m[m
+:[K[K[32m+[m[32mTo https://github.com/AndreaCirilloAC/r_data_mining.git[m[41m[m
+:[K[K[32m+[m[32m   7738fd9..b8f4161  master -> master[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add -chapt[[[[[[[Kchapter_13.R[m[41m [m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "[Kfor loop eampl[[[[[Kxample"[m[41m[m
+:[K[K[32m+[m[32m[master de74c74] for loop example[m[41m[m
+:[K[K[32m+[m[32m 1 file changed, 2 insertions(+), 2 deletions(-)[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git c[[Kpush[m[41m[m
+:[K[K[32m+[m[32mCounting objects: 3, done.[m[41m[m
+:[K[K[32m+[m[32mDelta compression using up to 4 threads.[m[41m[m
+:[K[K[32m+[m[32mCompressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.[m[41m[m
+:[K[K[32m+[m[32mWriting objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 328 bytes | 0 bytes/s, done.[m[41m[m
+:[K[K[32m+[m[32mTotal 3 (delta 2), reused 0 (delta 0)[m[41m[m
+:[K[K[32m+[m[32mremote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K[m[41m[m
+:[K[K[32m+[m[32mTo https://github.com/AndreaCirilloAC/r_data_mining.git[m[41m[m
+:[K[K[32m+[m[32m   b8f4161..de74c74  master -> master[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_[K13.R[m[41m [m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m"[[K "r[[Kremoved ind[[[[Klien nu[[[[[[Kne number computation in comments tidy"[m[41m[m
+:[K[K[32m+[m[32m[master f010b5a] removed line number computation in comments tidy[m[41m[m
+:[K[K[32m+[m[32m 1 file changed, 18 insertions(+), 8 deletions(-)[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push[m[41m[m
+:[K[K[32m+[m[32mCounting objects: 3, done.[m[41m[m
+:[K[K[32m+[m[32mDelta compression using up to 4 threads.[m[41m[m
+:[K[K[32m+[m[32mCompressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.[m[41m[m
+:[K[K[32m+[m[32mWriting objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 485 bytes | 0 bytes/s, done.[m[41m[m
+:[K[K[32m+[m[32mTotal 3 (delta 2), reused 0 (delta 0)[m[41m[m
+:[K[K[32m+[m[32mremote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K[m[41m[m
+:[K[K[32m+[m[32mTo https://github.com/AndreaCirilloAC/r_data_mining.git[m[41m[m
+:[K[K[32m+[m[32m   de74c74..f010b5a  master -> master[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ b[KMac-di-Andrea:r_data_mining andrea_cirillo$ [Kgit [Kadd chapter_13.R[m[41m [m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git c[[Kcommit -m "final version before remogi[[[Kving plot on ngrams "[m[41m[m
+:[K[K[32m+[m[32mOn branch master[m[41m[m
+:[K[K[32m+[m[32mYour branch is up-to-date with 'origin/master'.[m[41m[m
+:[K[K[32m+[m[32mChanges not staged for commit:[m[41m[m
+:[K[K[32m+[m [32m[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m[m[41m[m
+:[K[K[32m+[m [32m[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m[m[41m[m
+:[K[K[32m+[m[41m[m
+:[K[K[32m+[m[32mUntracked files:[m[41m[m
+:[K[K[32m+[m [32m[31m13_first_word_cloud.png[m[m[41m[m
+:[K[K[32m+[m [32m[31m13_second_word_cloud.png[m[m[41m[m
+:[K[K[32m+[m [32m[31m13_sentiment_distr.png[m[m[41m[m
+:[K[K[32m+[m[41m[m
+:[K[K[32m+[m[32mno changes added to commit[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "final version before removing plot on ngrams""[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[m[41m[m
+:[K[K[32m+[m[32m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K"[m[41m[m
+:[K[K[32m+[m[32mOn branch master[m[41m[m
+:[K[K[32m+[m[32mYour branch is up-to-date with 'origin/master'.[m[41m[m
+:[K[K[32m+[m[32mChanges not staged for commit:[m[41m[m
+:[K[K[32m+[m [32m[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m[m[41m[m
+:[K[K[32m+[m [32m[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m[m[41m[m
+:[K[K[32m+[m[41m[m
+:[K[K[32m+[m[32mUntracked files:[m[41m[m
+:[K[K[32m+[m [32m[31m13_first_word_cloud.png[m[m[41m[m
+:[K[K[32m+[m [32m[31m13_second_word_cloud.png[m[m[41m[m
+:[K[K[32m+[m [32m[31m13_sentiment_distr.png[m[m[41m[m
+:[K[K[32m+[m[41m[m
+:[K[K[32m+[m[32mno changes added to commit[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "final version before removing plot on ngram" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs""[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd chapter_13.R [K[m[41m[m
+:[K[K[32m+[m[32m[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "final version before removing plot on ngram" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K"[m[41m[m
+:[K[K[32m+[m[32m[master 837ae9d] final version before removing plot on ngram[m[41m[m
+:[K[K[32m+[m[32m 1 file changed, 43 insertions(+), 18 deletions(-)[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push[m[41m[m
+:[K[K[32m+[m[32mCounting objects: 3, done.[m[41m[m
+:[K[K[32m+[m[32mDelta compression using up to 4 threads.[m[41m[m
+:[K[K[32m+[m[32mCompressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.[m[41m[m
+:[K[K[32m+[m[32mWriting objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 638 bytes | 0 bytes/s, done.[m[41m[m
+:[K[K[32m+[m[32mTotal 3 (delta 2), reused 0 (delta 0)[m[41m[m
+:[K[K[32m+[m[32mremote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K[m[41m[m
+:[K[K[32m+[m[32mTo https://github.com/AndreaCirilloAC/r_data_mining.git[m[41m[m
+:[K[K[32m+[m[32m   f010b5a..837ae9d  master -> master[m[41m[m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_13.R[m[41m [m
+:[K[K[32m+[m[32m]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m [[[[[[[[[[[Kdiff[m
+:[K[K\ No newline at end of file[m
+:[K[K[1mdiff --git a/.Rproj.user/A16E1F5C/console06/INDEX001 b/.Rproj.user/A16E1F5C/console06/INDEX001[m
+:[K[K[1mindex 5748e31..ca7ecc2 100644[m
+:[K[K[1m--- a/.Rproj.user/A16E1F5C/console06/INDEX001[m
+:[K[K[1m+++ b/.Rproj.user/A16E1F5C/console06/INDEX001[m
+:[K[K[36m@@ -1 +1 @@[m
+:[K[K[31m-[{"allow_restart":true,"alt_buffer":false,"autoclose":1,"buffered_output":"\n\n\n\n\n\n\n","caption":"Terminal 1","channel_id":"5681","channel_mode":1,"child_procs":false,"cols":111,"cwd":"","exit_code":15,"handle":"15350E2A","interaction_mode":2,"max_output_lines":1000,"restarted":true,"rows":8,"shell_type":7,"show_on_output":false,"terminal_sequence":1,"title":"~/Dropbox/R_projects/r_data_mining","track_env":true,"zombie":false}][m
+:[K[K\ No newline at end of file[m
+:[K[K[32m+[m[32m[{"allow_restart":true,"alt_buffer":false,"autoclose":1,"buffered_output":"\n\n\n\n\n\n\n\n","caption":"Terminal 1","channel_id":"7999","channel_mode":1,"child_procs":false,"cols":104,"cwd":"~/Dropbox/R_projects/r_data_mining","exit_code":null,"handle":"15350E2A","interaction_mode":2,"max_output_lines":1000,"restarted":true,"rows":14,"shell_type":7,"show_on_output":false,"terminal_sequence":1,"title":"~/Dropbox/R_projects/r_data_mining","track_env":true,"zombie":false}][m
+:[K[K\ No newline at end of file[m
+:[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[?1l>]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ gti[K[Kit commit -m "cel[K[Kleaned graph"
+[master 4b2c8da] cleaned graph
+ 1 file changed, 12 insertions(+), 47 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 467 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   837ae9d..4b2c8da  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m13_barplot_industry.png[m
+	[31m13_first_network.png[m
+	[31m13_first_word_cloud.png[m
+	[31m13_last_network.png[m
+	[31m13_second_network.png[m
+	[31m13_second_word_cloud.png[m
+	[31m13_sentiment_distr.png[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ git add [Kch[K[K chapter_13.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "small finetun[K[K[K tuning"
+[master 38e00dd] small fine tuning
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 338 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   4b2c8da..38e00dd  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git addfi[K[K final_report.Rmd 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "final report [K[K[K[K[K[K[K[K[K[K[K[K[Kadded final ri[Keport"
+[master fd40cb1] added final report
+ 1 file changed, 78 insertions(+)
+ create mode 100644 final_report.Rmd
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 1.48 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   38e00dd..fd40cb1  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ gitaf[K[K add chapter_13.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "added graph_object fe[K[Kdefinition tonetwork analu ysis[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kly sis"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd chapter_13.R [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[Kadd chapter_13.R commit -m "added graph_object definition tonetwork analyssis"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnetwork analysi[1Ps"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnetwork analysis[1P"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctnetwork analysis"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Conetwork analysis"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C network analysis"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[master bcbddc7] added graph_object definition to network analysis
+ 1 file changed, 25 insertions(+), 22 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git pish[K[K[Kush
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 446 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   fd40cb1..bcbddc7  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git final_report.Rmd 
+git: 'final_report.Rmd' is not a git command. See 'git --help'.
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git [K[K[K[Kgit final_report.Rmd [C[C[C[C[1@ [1@a[1@d[1@d
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "base version of [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krm aèè[K[Kpp.r
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git ass [K[K[Kdd -[Kfinal_report.Rmd 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "base"[K bersion[K[K[K[K[K[K[Kversion"
+[master fc86c2d] base version
+ 1 file changed, 117 insertions(+), 3 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 2.33 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+gTo https://github.com/AndreaCirilloAC/r_data_mining.git
+   bcbddc7..fc86c2d  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add -[Kchapter_14.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "ini[K[K[Kbase app[K[K[Kshinya[K app"
+[master fe1c5ac] base shiny app
+ 1 file changed, 14 insertions(+)
+ create mode 100644 chapter_14.R
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 456 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   fc86c2d..fe1c5ac  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git pushcommit -m "base shiny app"[9Padd chapter_14.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_14.R push[Kcommit -m "base shiny app"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"s"i"m"p"l"i"f"i"e"d" "a"p"p"[1P"[1P"[1P"[1P"[1P"[1P"e"d" "s"e"r"v"e"r" "s"i"d"e"
+[master 95277f8] simplified server side
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git sp[K[Kpush
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 355 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   fe1c5ac..95277f8  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_14.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "added data lineage module"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/A16E1F5C/sources/prop/INDEX[m
+	[31mmodified:   final_report.Rmd[m
+
+Untracked files:
+	[31m13_barplot_industry.png[m
+	[31m13_first_network.png[m
+	[31m13_first_word_cloud.png[m
+	[31m13_last_network.png[m
+	[31m13_second_network.png[m
+	[31m13_second_word_cloud.png[m
+	[31m13_sentiment_distr.png[m
+	[31mdata/corpus.rdata[m
+
+no changes added to commit
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git pu[K[K[K[K[K[Kgi[K[Kgit add chapter_14.R 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add chapter_14.R commit -m "added data lineage module"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/A16E1F5C/sources/prop/INDEX[m
+	[31mmodified:   final_report.Rmd[m
+
+Untracked files:
+	[31m13_barplot_industry.png[m
+	[31m13_first_network.png[m
+	[31m13_first_word_cloud.png[m
+	[31m13_last_network.png[m
+	[31m13_second_network.png[m
+	[31m13_second_word_cloud.png[m
+	[31m13_sentiment_distr.png[m
+	[31mdata/corpus.rdata[m
+
+no changes added to commit
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "added data lineage module"[Kgit add final_report.Rmd 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add final_report.Rmd commit -m "added data lineage module"
+[master a2b0125] added data lineage module
+ 1 file changed, 15 insertions(+), 38 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 642 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   95277f8..a2b0125  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add final_report.Rmd 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git commit -m "final version"
+[master 3732a96] final version
+ 1 file changed, 25 insertions(+), 6 deletions(-)
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 918 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   a2b0125..3732a96  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git sat[K[Ktatus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/A16E1F5C/sources/prop/INDEX[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m13_barplot_industry.png[m
+	[31m13_first_network.png[m
+	[31m13_first_word_cloud.png[m
+	[31m13_last_network.png[m
+	[31m13_second_network.png[m
+	[31m13_second_word_cloud.png[m
+	[31m13_sentiment_distr.png[m
+	[31mdata/corpus.rdata[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ [KMac-di-Andrea:r_data_mining andrea_cirillo$ git add data/corpus.rdata 
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ gt[Kit a[Kcommit -m "coru[Kpo[Kus data set to be employed within the rep [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Krm d[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kmd  report"
+[master 841febf] corpus data set to be employed within the rmd report
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 data/corpus.rdata
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 7.18 KiB | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/AndreaCirilloAC/r_data_mining.git
+   3732a96..841febf  master -> master
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/15350E2A[m
+	[31mmodified:   .Rproj.user/A16E1F5C/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/A16E1F5C/sources/prop/INDEX[m
+	[31mdeleted:    11_defaulted_list_mail.png[m
+	[31mdeleted:    11_importance_predictors.png[m
+	[31mdeleted:    11_models precision.png[m
+	[31mdeleted:    11_models_precision.png[m
+	[31mdeleted:    11_random_forest.png[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Dropbox/R_projects/r_data_miningMac-di-Andrea:r_data_mining andrea_cirillo$ git add -A
