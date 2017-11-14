@@ -129,7 +129,15 @@ cash_flow_report %>%
   theme_minimal()+
   theme(legend.position = "none")
 
-  
+
+cash_flow_report %>% 
+  group_by( y) %>% 
+  summarise(cash_flow = sum(cash_flow)) %>%
+  rename(date = y) %>% 
+  ggplot(aes(x = date, y = cash_flow, group = 1))+
+  geom_line()+
+  geom_point()+
+  labs(title = "cash flows by quarter")
 
 
 
