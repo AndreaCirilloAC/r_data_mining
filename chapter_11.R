@@ -44,9 +44,9 @@ support_vector_data <- data.frame(predicted = support_vector_machine_linear$fitt
                                   truth = as.numeric(training_data$default_numeric))
 
 support_vector_data %>% 
-  mutate(predicted_treshold = case_when(as.numeric(predicted)>0.5 ~ 1,
+  mutate(predicted_threshold = case_when(as.numeric(predicted)>0.5 ~ 1,
                                         TRUE ~ 0))-> support_vector_table
-confusionMatrix(as.factor(support_vector_table$predicted_treshold), 
+confusionMatrix(as.factor(support_vector_table$predicted_threshold), 
                 as.factor(support_vector_table$truth))
 
 # random forest
