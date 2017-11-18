@@ -22,6 +22,7 @@ week_decode <- data.frame(
 )
 
 movements_clean <- merge.data.frame(movements_clean,week_decode, by = "day_of_week")
+# alternative dplyr code: movements_clean <- inner_join(movements_clean,week_decode, by = "day_of_week")
 
 movements_clean %>% 
   group_by(month) %>% 
